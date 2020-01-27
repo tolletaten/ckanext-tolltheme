@@ -11,6 +11,9 @@ ckanext/tolltheme/templates/base.html
 ckanext/tolltheme/templates/header.html
 ckanext/tolltheme/templates/home/index.html
 ckanext/tolltheme/templates/home/snippets/promoted.html
+ckanext/tolltheme/templates/home/snippets/stats.html
+ckanext/tolltheme/templates/package/base.html
+ckanext/tolltheme/templates/package/read_base.html
 ckanext/tolltheme/tests/__init__.py
 ckanext/tolltheme/tests/test_plugin.py
 ckanext_tolltheme.egg-info/PKG-INFO
