@@ -1,7 +1,0 @@
-
-        [ckan.plugins]
-        tolltheme=ckanext.tolltheme.plugin:TollthemePlugin
-
-        [babel.extractors]
-        ckan = ckan.lib.extract:extract_ckan
-    
