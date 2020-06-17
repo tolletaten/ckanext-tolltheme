@@ -2,13 +2,13 @@
 <html lang="en-US">
     <head>
         <meta charset="UTF-8">
-        <meta http-equiv="refresh" content="0; url={{ app_globals.site_url }}/dataset">
+        <meta http-equiv="refresh" content="0; url={{ g.site_url | safe }}/dataset">
         <script type="text/javascript">
-            window.location.href = "{{ app_globals.site_url }}/dataset"
+            window.location.href = "{{ g.site_url | safe }}/dataset"
         </script>
         <title>Page Redirection</title>
     </head>
     <body>
-        If you are not redirected automatically, follow this <a href='{{ app_globals.site_url }}/dataset'>{{ app_globals.site_url }}/dataset</a>.
+        If you are not redirected automatically, follow this <a href='{{ g.site_url | safe }}/dataset'>{{ g.site_url | safe }}/dataset</a>.
     </body>
 </html>
