@@ -2,13 +2,13 @@
 <html lang="en-US">
     <head>
         <meta charset="UTF-8">
-        <meta http-equiv="refresh" content="0; url=https://data.toll.no/dataset">
+        <meta http-equiv="refresh" content="0; url={{ app_globals.site_url }}/dataset">
         <script type="text/javascript">
-            window.location.href = "https://data.toll.no/dataset"
+            window.location.href = "{{ app_globals.site_url }}/dataset"
         </script>
         <title>Page Redirection</title>
     </head>
     <body>
-        If you are not redirected automatically, follow this <a href='https://data.toll.no/dataset'>https://data.toll.no/dataset</a>.
+        If you are not redirected automatically, follow this <a href='{{ app_globals.site_url }}/dataset'>{{ app_globals.site_url }}/dataset</a>.
     </body>
 </html>
