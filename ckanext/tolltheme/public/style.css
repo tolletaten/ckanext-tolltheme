@@ -1,3 +1,85 @@
-.account-masthead {
-    background-color: red !important;
+body {
+    background: #FFF;
 }
+.wrapper {
+    border-radius: .125rem;
+   -webkit-box-shadow: 0 0 0 0;
+   box-shadow: 0 0 0 0;
+}
+[role=main], .main {
+    background: rgba(0,0,0,0.05);
+}
+.hero {
+    background: rgba(0,0,0,0.05);
+}
+.masthead {
+    background: #FFF;
+}
+.account-masthead {
+    background: #FFF;
+}
+.account-masthead .account ul li a,
+.account-masthead .account ul li a:hover {
+    color: #000;
+    background-color:#FFF;
+}
+.account-masthead .account ul li {
+    border-left: 0;
+}
+.account-masthead .account .notifications a span.badge {
+    color: #000;
+background-color:#FFF;
+}
+.masthead .nav>li>a, .masthead .nav>li>a:focus, .masthead .nav>li>a:hover, .masthead .nav>.active>a, .masthead .nav>.active>a:hover, .masthead .nav>.active>a:focus {
+    color: #000;
+    text-shadow: none;
+}
+img.gravatar {
+    display: none;
+}
+.site-footer {   
+    background: #FFF;
+}
+.homepage .module-search .module-content {
+    background: #FFF;
+    color: #000;
+}
+.homepage .module-search .tags {
+   background: #FFF;
+    color: #000;
+}
+.box {
+   border: .125rem solid rgba(55,65,73,.25);
+   border-radius: .125rem;
+   -webkit-box-shadow: 0 0 0 0;
+   box-shadow: 0 0 0 0;
+}
+a.tag:hover {
+    border-color: #000;
+    background: #000;
+    border-radius: 0px; 
+    -webkit-box-shadow: 0 0 0 0;
+    box-shadow: 0 0 0 0;
+}
+.tag {
+    color: #111111;
+    background-color: #fff;
+    border-radius: 0px; 
+    -webkit-box-shadow: 0 0 0 0 
+    box-shadow: 0 0 0 0 ;
+}
+.masthead .navigation .nav-pills li a:hover, .masthead .navigation .nav-pills li a:focus, .masthead .navigation .nav-pills li.active a {
+    background-color: inherit;
+    text-decoration: underline;    
+}
+.form-control {
+    border-radius: 0;
+}
+.site-footer, .site-footer a, .site-footer label, .site-footer small {
+    color: #000;
+}
+
+.toll_link > * {
+    color: #007682 !important;
+}
+

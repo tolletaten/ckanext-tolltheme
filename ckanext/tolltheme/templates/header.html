@@ -49,11 +49,8 @@
     <nav class="account not-authed">
       <ul class="list-unstyled">
         {% block header_account_notlogged %}
-        <li>{% link_for _('Log in'), named_route='user.login' %}</li>
-        {% if h.check_access('user_create') %}
-        <li>{% link_for _('Register'), named_route='user.register', class_='sub' %}</li>
-        {% endif %} {% endblock %}
-      </ul>
+        <li class="toll_link">{% link_for _('Log in'), named_route='user.login' %}</li>
+	{% endblock %}
     </nav>
     {% endif %} {% endblock %}
   </div>
@@ -79,25 +76,6 @@
       {% if g.site_description %}
       <h2>{{ g.site_description }}</h2>{% endif %} {% endif %} {% endblock %}
     </hgroup>
-
-    <div class="collapse navbar-collapse" id="main-navigation-toggle">
-      {% block header_site_navigation %}
-      <nav class="section navigation">
-        <ul class="nav nav-pills">
-          {% block header_site_navigation_tabs %} {{ h.build_nav_main( ('search', _('Datasets')), 
-          ('group_index', _('Groups')), ('home.about', _('About')) ) }} {% endblock %}
-        </ul>
-      </nav>
-      {% endblock %} {% block header_site_search %}
-      <form class="section site-search simple-input" action="{% url_for controller='package', action='search' %}" method="get">
-        <div class="field">
-          <label for="field-sitewide-search">{% block header_site_search_label %}{{ _('Search Datasets') }}{% endblock %}</label>
-          <input id="field-sitewide-search" type="text" class="form-control" name="q" placeholder="{{ _('Search') }}" />
-          <button class="btn-search" type="submit"><i class="fa fa-search"></i></button>
-        </div>
-      </form>
-      {% endblock %}
-    </div>
   </div>
 </header>
 {% endblock %}
