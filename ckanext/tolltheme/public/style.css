@@ -84,3 +84,29 @@ a.tag:hover {
   color: #007682 !important;
 }
 
+#field-order-by {
+  border-radius: 5px;
+  box-shadow: 0;
+}
+
+.item-count {
+  background-color: #007682;
+}
+
+footer {
+  background-color: #e6f1f3;
+  padding: 3em;
+}
+
+.footer-links {
+  display: grid;
+  justify-content: center;
+  grid-column-gap: 10%;
+  grid-template-columns: auto auto auto auto;
+  margin-bottom: 3em;
+}
+
+.toll-footer {
+  display: flex;
+  justify-content: center;
+}
