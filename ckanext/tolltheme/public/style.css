@@ -12,12 +12,21 @@ body {
 .hero {
     background: rgba(0,0,0,0.05);
 }
-.masthead {
-    background: #FFF;
+.main-header {
+  background: #FFF;
+  padding: 1em 0;
 }
-.account-masthead {
-    background: #FFF;
+
+.header-container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
 }
+
+.header-container:before, .header-container:after {
+    content: none
+}
+
 .account-masthead .account ul li a,
 .account-masthead .account ul li a:hover {
     color: #000;
@@ -28,7 +37,7 @@ body {
 }
 .account-masthead .account .notifications a span.badge {
     color: #000;
-background-color:#FFF;
+    background-color:#FFF;
 }
 .masthead .nav>li>a, .masthead .nav>li>a:focus, .masthead .nav>li>a:hover, .masthead .nav>.active>a, .masthead .nav>.active>a:hover, .masthead .nav>.active>a:focus {
     color: #000;
@@ -90,11 +99,12 @@ a.tag:hover {
 }
 
 .item-count {
-  background-color: #007682;
+  background-color: var(--color-toll-teal);
+  border-radius: 6px;
 }
 
 footer {
-  background-color: #e6f1f3;
+  background-color: var(--color-bg-toll-teal);
   padding: 3em;
 }
 

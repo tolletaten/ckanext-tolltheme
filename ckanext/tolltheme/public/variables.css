@@ -1,0 +1,9 @@
+:root {
+  --color-bg-toll-teal: #e6f1f3;
+  --color-border-gray: rgba(0, 0, 0, 0.12);
+  --color-light-gray: rgba(0, 0, 0, 0.26);
+  --color-table-head-text: rgba(0, 0, 0, 0.71);
+  --color-text-primary: rgba(0, 0, 0, 0.87);
+  --color-toll-blue: #123f4e;
+  --color-toll-teal: #007682;
+}
