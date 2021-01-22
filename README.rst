@@ -76,12 +76,13 @@ To install ckanext-tolltheme:
 Config Settings
 ---------------
 
-Document any optional config settings here. For example::
+Document any optional config settings here.::
 
-    # The minimum number of hours to wait before re-checking a resource
-    # (optional, default: 24).
-    ckanext.tolltheme.some_setting = some_default_value
-
+    # The filters to show in on the left side on the dataset page.
+    # Specified as a list of elements separated by spaces. Can be specified as the ckan facet key names or
+    # the display titles in the chosen language. The value * can be used to include all the filters.
+    # (optional, default: tags res_format, which maps to the Norwegian titles Stikkord and Formater)
+    tolltheme.dataset.filters = Stikkord Formater Lisenser
 
 ------------------------
 Development Installation
