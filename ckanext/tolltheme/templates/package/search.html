@@ -1,0 +1,7 @@
+{# Extends the original template, instead of overwriting the entire file #}
+{% ckan_extends %}
+
+{# Overrides the breadcrumb_content to change the text of the Dataset-link. #}
+{% block breadcrumb_content %}
+  <li class="active">{{ h.nav_link('Tolletatens åpne data', controller='package', action='search', named_route='search') }}</li>
+{% endblock %}
