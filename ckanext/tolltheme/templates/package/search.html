@@ -1,6 +1,13 @@
 {# Extends the original template, instead of overwriting the entire file #}
 {% ckan_extends %}
 
+{# Overrides the toolbar to add some info below the breadcrumbs #}
+{% block toolbar %}
+  {{ super() }}
+
+  {% snippet 'package/snippets/toll_data_info.html' %}
+{% endblock %}
+
 {# Overrides the breadcrumb_content to change the text of the Dataset-link. #}
 {% block breadcrumb_content %}
   <li class="active">{{ h.nav_link('Tolletatens åpne data', controller='package', action='search', named_route='search') }}</li>
