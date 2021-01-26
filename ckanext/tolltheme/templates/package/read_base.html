@@ -1,7 +1,18 @@
 {# Extends the original template, instead of overwriting the entire file #}
 {% ckan_extends %}
 
-{# Disabled the secondary block on the left of the page #}
+{# Overrides the page header, to remove the navigation tabs, but preserve the content actions #}
+{% block page_header %}
+  {% if self.content_action() | trim %}
+    <header class="module-content page-header">
+      <div class="content_action">
+        {% block content_action %}{% endblock %}
+      </div>
+    </header>
+  {% endif %}
+{% endblock %}
+
+{# Disabled the secondary block on the left of the page, when viewing each dataset #}
 {% block secondary %}{% endblock %}
 
 {# Overrides the primary block of the page #}
