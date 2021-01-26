@@ -122,5 +122,14 @@ footer {
 }
 
 .toll-data-info {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.facet-icon {
+  vertical-align: middle;
+}
+
+.facet-title {
+  vertical-align: middle;
+  margin-left: 10px;
 }
