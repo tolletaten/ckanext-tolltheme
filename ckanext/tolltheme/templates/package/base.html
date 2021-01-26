@@ -1,18 +1,15 @@
-{% extends "page.html" %}
+{# Extends the original template, instead of overwriting the entire file #}
+{% ckan_extends %}
 
-{% set pkg = c.pkg_dict or pkg_dict %}
-
-{% block breadcrumb_content_selected %} class="active"{% endblock %}
-
-{% block subtitle %}{{ _('Datasets') }}{% endblock %}
-
+{# Overrides the breadcrumb_content block #}
 {% block breadcrumb_content %}
+  {% set dataset_link_text = 'Tolletatens åpne data' %}
   {% if pkg %}
     {% set dataset = h.dataset_display_name(pkg) %}
-    <li>{% link_for _('Datasets'), controller='package', action='search' %}</li>
+    <li>{% link_for dataset_link_text, controller='package', action='search' %}</li>
     <li{{ self.breadcrumb_content_selected() }}>{% link_for dataset|truncate(30), controller='package', action='read', id=pkg.name %}</li>
   {% else %}
-    <li>{% link_for _('Datasets'), controller='package', action='search' %}</li>
+    <li>{% link_for dataset_link_text, controller='package', action='search' %}</li>
     <li class="active"><a href="">{{ _('Create Dataset') }}</a></li>
   {% endif %}
 {% endblock %}
