@@ -76,6 +76,10 @@ To install ckanext-tolltheme:
 Config Settings
 ---------------
 
+To use the theme's default logo::
+
+   ckan.site_logo = /tolletaten-logo.svg
+
 Document any optional config settings here.::
 
     # The filters to show in on the left side on the dataset page.
