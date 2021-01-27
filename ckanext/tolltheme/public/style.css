@@ -133,3 +133,9 @@ footer {
   vertical-align: middle;
   margin-left: 10px;
 }
+
+.module .read-more {
+  color: #007682 !important;
+  text-transform: uppercase;
+  font-size: small;
+}
