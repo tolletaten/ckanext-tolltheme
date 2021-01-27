@@ -1,13 +1,15 @@
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 
+from ckan.lib.plugins import DefaultTranslation
 from ckan.common import config
 from collections import OrderedDict
 
 
-class TollthemePlugin(plugins.SingletonPlugin):
+class TollthemePlugin(plugins.SingletonPlugin, DefaultTranslation):
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.IFacets)
+    plugins.implements(plugins.ITranslation)
 
     # IConfigurer
 
