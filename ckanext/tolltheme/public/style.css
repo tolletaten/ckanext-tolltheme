@@ -140,3 +140,11 @@ footer {
   text-transform: uppercase;
   font-size: small;
 }
+
+.search-form {
+  border-bottom: 2px solid #dddddd;
+}
+
+.dataset-item {
+  border-bottom: 2px solid #dddddd;
+}
