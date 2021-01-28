@@ -148,3 +148,23 @@ footer {
 .dataset-item {
   border-bottom: 2px solid #dddddd;
 }
+
+.dataset-heading-link-wrapper {
+  display: inline-block;
+  float: right;
+}
+
+.dataset-heading-link-wrapper a {
+  color: #007682 !important;
+  font-size: small;
+  padding: 5px;
+}
+
+.dataset-heading-link-wrapper a:hover {
+  background-color: #e6f1f3;
+  text-decoration: none;
+}
+
+.dataset-heading-link-wrapper:hover ~ .dataset-heading-title {
+  text-decoration: underline;
+}

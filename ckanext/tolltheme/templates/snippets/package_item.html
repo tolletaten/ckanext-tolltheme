@@ -1,0 +1,26 @@
+{# Extends the original template, instead of overwriting the entire file #}
+{% ckan_extends %}
+
+{% block heading %}
+  <h3 class="dataset-heading">
+    {# Will float to the right of the heading_title, but needs to be earlier in the DOM for CSS magic. #}
+    <span class="dataset-heading-link-wrapper">
+      <a href="{{ h.url_for(package.type + '_read', controller='package', action='read', id=package.name) }}">
+        {{ _('GO TO DATASET') }}
+      </a>
+    </span>
+
+    {% block heading_private %}
+      {{ super() }}
+    {% endblock %}
+
+    {% block heading_title %}
+      <span class="dataset-heading-title">{{ h.truncate(title, truncate_title) }}</span>
+    {% endblock %}
+
+    {% block heading_meta %}
+      {{ super() }}
+    {% endblock %}
+  </h3>
+{% endblock %}
+

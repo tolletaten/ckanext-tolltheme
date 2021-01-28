@@ -22,3 +22,6 @@ msgstr ""
 msgid "Search datasets"
 msgstr "Søk i datasett"
 
+msgid "GO TO DATASET"
+msgstr "GÅ TIL DATASETT"
+
