@@ -102,6 +102,7 @@ a.tag:hover {
 .item-count {
   background-color: var(--color-toll-teal);
   border-radius: 6px;
+  margin-left: 10px;
 }
 
 footer {
