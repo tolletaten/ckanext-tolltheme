@@ -201,3 +201,7 @@ footer {
   background-position: unset;
   right: 6px;
 }
+
+.pill {
+  background-color: var(--color-toll-teal);
+}
