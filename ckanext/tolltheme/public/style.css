@@ -169,3 +169,35 @@ footer {
 .dataset-heading-link-wrapper:hover ~ .dataset-heading-title {
   text-decoration: underline;
 }
+
+.nav-item.active > a,
+.nav-aside li.active a {
+  position: relative;
+  color: black;
+  background-color: lightgray;
+}
+
+.nav-item.active > a:hover,
+.nav-aside li.active a:hover {
+  color: black;
+  background-color: lightgray;
+}
+
+@media (min-width: 768px) {
+  .nav-item.active > a:before,
+  .nav-aside li.active a:before {
+    border-left-color: lightgray;
+  }
+}
+
+.nav-facet .nav-item.active > a:after {
+  display: inline-block;
+  vertical-align: text-bottom;
+  background-image: url("cancel-icon.svg");
+  background-repeat: no-repeat;
+}
+
+.nav-facet .nav-item.active > a:after {
+  background-position: unset;
+  right: 6px;
+}
