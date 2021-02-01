@@ -2,6 +2,6 @@
 
 {%- block styles %}
   {{ super() }}
-  <link rel="stylesheet" href="/style.css" />
-  <link rel="stylesheet" href="/variables.css" />
+  <link rel="stylesheet" href="{{ h.tolltheme_url_with_version_token('/style.css') }}" />
+  <link rel="stylesheet" href="{{ h.tolltheme_url_with_version_token('/variables.css') }}" />
 {% endblock %}
