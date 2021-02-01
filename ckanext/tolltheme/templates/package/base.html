@@ -1,6 +1,13 @@
 {# Extends the original template, instead of overwriting the entire file #}
 {% ckan_extends %}
 
+{# Overrides the toolbar to add some info below the breadcrumbs #}
+{% block toolbar %}
+  {{ super() }}
+
+  {% snippet 'package/snippets/toll_data_info.html' %}
+{% endblock %}
+
 {# Overrides the breadcrumb_content block #}
 {% block breadcrumb_content %}
   {% set dataset_link_text = 'Tolletatens åpne data' %}

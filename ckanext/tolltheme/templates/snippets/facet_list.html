@@ -1,0 +1,15 @@
+{# Extends the original template, instead of overwriting the entire file #}
+{% ckan_extends %}
+
+{# Overrides the facet list heading, to replace the filter icon #}
+{% block facet_list_heading %}
+  <h2 class="module-heading">
+    <span class="facet-icon">
+      {% snippet 'snippets/material_design_filter_list_icon.html' %}
+    </span>
+    <span class="facet-title">
+      {% set title = title or h.get_facet_title(name) %}
+      {{ title }}
+    </span>
+  </h2>
+{% endblock %}
