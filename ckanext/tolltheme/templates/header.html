@@ -10,20 +10,11 @@
         {# Moved and changed #}
         <hgroup class="{{ g.header_class }} navbar-left">
           {% block header_logo %}
-            {% if g.site_logo %}
-              <a class="logo" href="{{ h.url_for('home.index') }}">
-                {# Added a version token to the URL, to force cache refresh when it changes. #}
-                <img src="{{ h.tolltheme_url_with_version_token(h.url_for_static_or_external(g.site_logo)) }}"
-                     alt="{{ g.site_title }}" title="{{ g.site_title }}" />
-              </a>
-            {% else %}
-              <h1>
-                <a href="{{ h.url_for('home.index') }}">{{ g.site_title }}</a>
-              </h1>
-              {% if g.site_description %}
-                <h2>{{ g.site_description }}</h2>
-              {% endif %}
-            {% endif %}
+            {% set logo_url = g.site_logo if g.site_logo else '/tolletaten-logo.svg' %}
+            <a class="logo" href="{{ h.url_for('home.index') }}">
+              <img src="{{ h.tolltheme_url_with_version_token(h.url_for_static_or_external(logo_url)) }}"
+                   alt="{{ g.site_title }}" title="{{ g.site_title }}" />
+            </a>
           {% endblock %}
         </hgroup>
 
