@@ -158,7 +158,8 @@ footer {
 .dataset-heading-link-wrapper a {
   color: #007682 !important;
   font-size: small;
-  padding: 5px;
+  padding: 6px;
+  border-radius: 3px;
 }
 
 .dataset-heading-link-wrapper a:hover {
