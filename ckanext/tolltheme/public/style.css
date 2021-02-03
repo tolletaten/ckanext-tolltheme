@@ -65,20 +65,32 @@ img.gravatar {
  -webkit-box-shadow: 0 0 0 0;
  box-shadow: 0 0 0 0;
 }
-a.tag:hover {
-  border-color: #000;
-  background: #000;
-  border-radius: 0px;
-  -webkit-box-shadow: 0 0 0 0;
-  box-shadow: 0 0 0 0;
+
+.tag-list {
+  padding: 10px 40px 5px 40px;
 }
+
+.tag-list.well {
+  background-color: var(--color-bg-toll-teal);
+}
+
 .tag {
-  color: #111111;
-  background-color: #fff;
-  border-radius: 0px;
-  -webkit-box-shadow: 0 0 0 0;
-  box-shadow: 0 0 0 0;
+  background-color: var(--color-toll-teal);
+  color: white;
+  -webkit-box-shadow: unset;
+  box-shadow: unset;
+  padding: 5px 15px;
+  font-weight: bold;
+  font-size: small;
 }
+
+a.tag:hover {
+  background-color: #164959;
+  border: 1px solid #0f323c;
+  -webkit-box-shadow: unset;
+  box-shadow: unset;
+}
+
 .masthead .navigation .nav-pills li a:hover, .masthead .navigation .nav-pills li a:focus, .masthead .navigation .nav-pills li.active a {
   background-color: inherit;
   text-decoration: underline;
@@ -194,7 +206,7 @@ footer {
 .nav-facet .nav-item.active > a:after {
   display: inline-block;
   vertical-align: text-bottom;
-  background-image: url("cancel-icon.svg");
+  background-image: url("icons/cancel-icon.svg");
   background-repeat: no-repeat;
 }
 
@@ -205,8 +217,32 @@ footer {
 
 .pill {
   background-color: var(--color-toll-teal);
+  font-weight: bold;
+  font-size: small;
+  padding: 5px 20px;
 }
 
 .toolbar {
   margin-bottom: 0;
+}
+
+.additional-info .dataset-label {
+  font-weight: normal;
+}
+
+.additional-info .dataset-details {
+  font-weight: bold;
+}
+
+.table-condensed > thead > tr > th,
+.table-condensed > tbody > tr > th,
+.table-condensed > tfoot > tr > th,
+.table-condensed > thead > tr > td,
+.table-condensed > tbody > tr > td,
+.table-condensed > tfoot > tr > td {
+  padding: 2px;
+}
+
+.fill-width {
+  width: 100%;
 }
