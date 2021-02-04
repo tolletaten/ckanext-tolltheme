@@ -269,6 +269,10 @@ footer {
   border-bottom: 1px solid #dddddd;
 }
 
+.resource-item .heading {
+  font-weight: normal;
+}
+
 .resource-item .format-label {
   top: unset;
   left: -30px;
