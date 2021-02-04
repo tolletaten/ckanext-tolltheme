@@ -14,7 +14,7 @@
   {% if pkg %}
     {% set dataset = h.dataset_display_name(pkg) %}
     <li>{% link_for dataset_link_text, controller='package', action='search' %}</li>
-    <li{{ self.breadcrumb_content_selected() }}>{% link_for dataset|truncate(30), controller='package', action='read', id=pkg.name %}</li>
+    <li{{ self.breadcrumb_content_selected() }}>{% link_for dataset|truncate(100), controller='package', action='read', id=pkg.name %}</li>
   {% else %}
     <li>{% link_for dataset_link_text, controller='package', action='search' %}</li>
     <li class="active"><a href="">{{ _('Create Dataset') }}</a></li>
