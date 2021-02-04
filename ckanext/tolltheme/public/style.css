@@ -256,6 +256,10 @@ footer {
   padding: 2px;
 }
 
+.breadcrumb .active a {
+  color: black;
+}
+
 .breadcrumb :not(.active) a {
   color: #007682 !important;
 }
