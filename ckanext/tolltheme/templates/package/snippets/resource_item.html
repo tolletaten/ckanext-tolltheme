@@ -36,7 +36,7 @@
               <div class="resource-item-action">
                 <a href="{{ url }}">
                   {% if res.has_views %}
-                    <img src="/icons/preview-icon.svg" alt="preview" />
+                    <img src="/tolltheme-icons/preview-icon.svg" alt="preview" />
                     <span>{{ _('Preview') }}</span>
                   {% else %}
                     <i class="fa fa-info-circle"></i>
@@ -49,7 +49,7 @@
                 <div class="resource-item-action">
                   <a href="{{ res.url }}" class="resource-url-analytics" target="_blank">
                     {% if res.has_views or res.url_type == 'upload' %}
-                      <img src="/icons/download-icon.svg" alt="download" />
+                      <img src="/tolltheme-icons/download-icon.svg" alt="download" />
                       <span> {{ _('Download') }}</span>
                     {% else %}
                       <i class="fa fa-external-link"></i>
