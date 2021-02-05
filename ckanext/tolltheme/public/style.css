@@ -196,23 +196,27 @@ footer {
   text-decoration: underline;
 }
 
+.module-heading {
+  background-color: #E9E9E9;
+}
+
 .nav-item.active > a,
 .nav-aside li.active a {
   position: relative;
   color: black;
-  background-color: lightgray;
+  background-color: #C0C0C0;
 }
 
 .nav-item.active > a:hover,
 .nav-aside li.active a:hover {
   color: black;
-  background-color: lightgray;
+  background-color: #C0C0C0;
 }
 
 @media (min-width: 768px) {
   .nav-item.active > a:before,
   .nav-aside li.active a:before {
-    border-left-color: lightgray;
+    border-left-color: #C0C0C0;
   }
 }
 
