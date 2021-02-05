@@ -18,8 +18,8 @@
 {# Overrides the primary block of the page #}
 {% block primary %}
 
-  {# Changed the div to always use all 12 columns #}
-  <div class="primary col-12">
+  {# Changed the div to always use all 12 columns and added class fill-width #}
+  <div class="primary col-xs-12">
     {% block primary_content %}
       {{ super() }}
     {% endblock %}

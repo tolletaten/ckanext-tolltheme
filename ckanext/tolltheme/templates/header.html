@@ -7,10 +7,14 @@
     <header class="main-header"> {# Class changed #}
       <div class="container header-container"> {# Class changed #}
 
-        {# Moved, but unchanged #}
+        {# Moved and changed #}
         <hgroup class="{{ g.header_class }} navbar-left">
           {% block header_logo %}
-            {{ super() }}
+            {% set logo_url = g.site_logo if g.site_logo else '/tolletaten-logo.svg' %}
+            <a class="logo" href="{{ h.url_for('home.index') }}">
+              <img src="{{ h.tolltheme_url_with_version_token(h.url_for_static_or_external(logo_url)) }}"
+                   alt="{{ g.site_title }}" title="{{ g.site_title }}" />
+            </a>
           {% endblock %}
         </hgroup>
 
