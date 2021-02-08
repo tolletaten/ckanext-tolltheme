@@ -15,17 +15,16 @@ setup(
     # Versions should comply with PEP440.  For a discussion on single-sourcing
     # the version across setup.py and the project code, see
     # http://packaging.python.org/en/latest/tutorial.html#version
-    version='0.0.10',
+    version='0.0.11',
 
     description='''Custom theme for Tolletaten''',
     long_description=long_description,
 
     # The project's main homepage.
-    url='https://github.com/jere@toll.no/ckanext-tolltheme',
+    url='https://github.com/tolletaten/ckanext-tolltheme',
 
     # Author details
-    author='''Jeff Reiffers''',
-    author_email='''jeff.reiffers@toll.no''',
+    author='''Tolletaten''',
 
     # Choose your license
     license='AGPL',
