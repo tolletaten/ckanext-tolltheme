@@ -1,0 +1,44 @@
+{# Extends the original template, instead of overwriting the entire file #}
+{% ckan_extends %}
+
+{# Overwritten to style the additional info table differently. #}
+{% block resource_additional_information_inner %}
+  <div class="module-content">
+    <section class="dataset-resource-additional-info">
+      <h2>{{ _('Additional Information') }}</h2>
+      <table class="table-borderless table-condensed" data-module="table-toggle-more">
+        <tbody>
+        <tr>
+          <th scope="row" class="dataset-resource-label">{{ _('Data last updated') }}</th>
+          <td class="dataset-resource-details">{{ h.render_datetime(res.last_modified) or h.render_datetime(res.created) or _('unknown') }}</td>
+        </tr>
+        <tr>
+          <th scope="row" class="dataset-resource-label">{{ _('Metadata last updated') }}</th>
+          <td class="dataset-resource-details">{{ h.render_datetime(res.revision_timestamp) or h.render_datetime(res.created) or _('unknown') }}</td>
+        </tr>
+        <tr>
+          <th scope="row" class="dataset-resource-label">{{ _('Created') }}</th>
+          <td class="dataset-resource-details">{{ h.render_datetime(res.created) or _('unknown') }}</td>
+        </tr>
+        <tr>
+          <th scope="row" class="dataset-resource-label">{{ _('Format') }}</th>
+          <td class="dataset-resource-details">{{ res.mimetype_inner or res.mimetype or res.format or _('unknown') }}</td>
+        </tr>
+        <tr>
+          <th scope="row" class="dataset-resource-label">{{ _('License') }}</th>
+          <td class="dataset-resource-details">{% snippet "snippets/license.html", pkg_dict=pkg, text_only=True %}</td>
+        </tr>
+        {% for key, value in h.format_resource_items(res.items()) %}
+          <tr class="toggle-more">
+            <th scope="row" class="dataset-resource-label">{{ key }}</th>
+            <td class="dataset-resource-details">{{ value }}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </section>
+  </div>
+{% endblock %}
+
+{# Overwritten to removes social media information, by providing an empty block. #}
+{% block resource_license %}{% endblock %}
