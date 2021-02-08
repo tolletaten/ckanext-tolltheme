@@ -243,12 +243,16 @@ footer {
   margin-bottom: 0;
 }
 
-.additional-info .dataset-label {
+.additional-info .dataset-label, .dataset-resource-label {
   font-weight: normal;
 }
 
-.additional-info .dataset-details {
+.additional-info .dataset-details, .dataset-resource-details {
   font-weight: bold;
+}
+
+.dataset-resource-additional-info th {
+  width: 250px;
 }
 
 .table-condensed > thead > tr > th,
@@ -300,4 +304,8 @@ footer {
 
 .resource-item-action a:hover {
   text-decoration: none;
+}
+
+.js .table-toggle-more .toggle-seperator td {
+  background-image: unset;
 }
