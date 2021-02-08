@@ -326,3 +326,19 @@ footer {
 .js .table-toggle-more .toggle-seperator td {
   background-image: unset;
 }
+
+.pill a.remove {
+  margin-left: 10px;
+}
+
+.filtered.pill {
+  padding-right: 10px;
+}
+
+.show-filters.btn {
+  margin-top: 10px;
+}
+
+.filter-list .facet {
+  font-weight: bold;
+}
