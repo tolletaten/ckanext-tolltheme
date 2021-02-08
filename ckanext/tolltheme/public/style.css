@@ -138,14 +138,31 @@ footer {
 .footer-links {
   display: grid;
   justify-content: center;
-  grid-column-gap: 10%;
-  grid-template-columns: auto auto auto auto;
+  grid-column-gap: 5%;
+  grid-row-gap: 10%;
   margin-bottom: 3em;
+}
+
+@media (min-width: 500px) {
+  .footer-links {
+    grid-template-columns: auto auto auto auto;
+  }
+}
+
+@media (min-width: 580px) {
+  .footer-links {
+    grid-template-columns: auto auto auto auto;
+    grid-column-gap: 10%;
+  }
 }
 
 .toll-footer {
   display: flex;
   justify-content: center;
+}
+
+.toll-footer > p {
+  text-align: center;
 }
 
 .toll-data-info {
