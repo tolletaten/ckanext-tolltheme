@@ -1,57 +1,19 @@
-.. You should enable this project on travis-ci.org and coveralls.io to make
-   these badges work. The necessary Travis and Coverage config files have been
-   generated for you.
-
-.. image:: https://travis-ci.org/jere@toll.no/ckanext-tolltheme.svg?branch=master
-    :target: https://travis-ci.org/jere@toll.no/ckanext-tolltheme
-
-.. image:: https://coveralls.io/repos/jere@toll.no/ckanext-tolltheme/badge.svg
-  :target: https://coveralls.io/r/jere@toll.no/ckanext-tolltheme
-
-.. image:: https://pypip.in/download/ckanext-tolltheme/badge.svg
-    :target: https://pypi.python.org/pypi//ckanext-tolltheme/
-    :alt: Downloads
-
-.. image:: https://pypip.in/version/ckanext-tolltheme/badge.svg
-    :target: https://pypi.python.org/pypi/ckanext-tolltheme/
-    :alt: Latest Version
-
-.. image:: https://pypip.in/py_versions/ckanext-tolltheme/badge.svg
-    :target: https://pypi.python.org/pypi/ckanext-tolltheme/
-    :alt: Supported Python versions
-
-.. image:: https://pypip.in/status/ckanext-tolltheme/badge.svg
-    :target: https://pypi.python.org/pypi/ckanext-tolltheme/
-    :alt: Development Status
-
-.. image:: https://pypip.in/license/ckanext-tolltheme/badge.svg
-    :target: https://pypi.python.org/pypi/ckanext-tolltheme/
-    :alt: License
-
-=============
+=================
 ckanext-tolltheme
-=============
+=================
 
-.. Put a description of your extension here:
-   What does it do? What features does it have?
-   Consider including some screenshots or embedding a video!
-
+Tolltheme is a CKAN extension to customize Tolletaten's (Norwegian Customs) CKAN installation for providing open data
+to the public.
 
 ------------
 Requirements
 ------------
 
-For example, you might want to mention here which versions of CKAN this
-extension works with.
-
+This extension is developed for CKAN 2.8. See https://docs.ckan.org/en/2.8/theming/index.html for more info.
 
 ------------
 Installation
 ------------
-
-.. Add any additional install steps to the list below.
-   For example installing any non-Python dependencies or adding any required
-   config settings.
 
 To install ckanext-tolltheme:
 
@@ -95,7 +57,7 @@ Development Installation
 To install ckanext-tolltheme for development, activate your CKAN virtualenv and
 do::
 
-    git clone https://github.com/jere@toll.no/ckanext-tolltheme.git
+    git clone https://github.com/tolletaten/ckanext-tolltheme
     cd ckanext-tolltheme
     python setup.py develop
     pip install -r dev-requirements.txt
@@ -115,9 +77,9 @@ coverage installed in your virtualenv (``pip install coverage``) then run::
     nosetests --nologcapture --with-pylons=test.ini --with-coverage --cover-package=ckanext.tolltheme --cover-inclusive --cover-erase --cover-tests
 
 
----------------------------------
+-------------------------------------
 Registering ckanext-tolltheme on PyPI
----------------------------------
+-------------------------------------
 
 ckanext-tolltheme should be availabe on PyPI as
 https://pypi.python.org/pypi/ckanext-tolltheme. If that link doesn't work, then
@@ -144,9 +106,9 @@ steps:
        git push --tags
 
 
-----------------------------------------
+--------------------------------------------
 Releasing a New Version of ckanext-tolltheme
-----------------------------------------
+--------------------------------------------
 
 ckanext-tolltheme is availabe on PyPI as https://pypi.python.org/pypi/ckanext-tolltheme.
 To publish a new version to PyPI follow these steps:
