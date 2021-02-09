@@ -138,7 +138,7 @@ footer {
 .footer-links {
   display: grid;
   justify-content: center;
-  grid-column-gap: 5%;
+  grid-column-gap: 6%;
   grid-row-gap: 10%;
   margin-bottom: 3em;
 }
@@ -149,10 +149,10 @@ footer {
   }
 }
 
-@media (min-width: 580px) {
+@media (min-width: 992px) {
   .footer-links {
     grid-template-columns: auto auto auto auto;
-    grid-column-gap: 10%;
+    grid-column-gap: 11%;
   }
 }
 
