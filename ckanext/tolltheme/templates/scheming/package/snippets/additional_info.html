@@ -1,0 +1,19 @@
+{# Extends the original template, instead of overwriting the entire file #}
+{% ckan_extends %}
+
+{# Override to readd the extra fields #}
+{% block package_additional_info %}
+  {{ super() }}
+
+  {% block extras scoped %}
+    {% for extra in h.sorted_extras(pkg_dict.extras) %}
+      {% set key, value = extra %}
+      {# If the value is a URL, then display a clickable link #}
+      {% set display_value = h.link_to(value, value, target='_blank') if h.is_url(value) else value %}
+      <tr rel="dc:relation" resource="_:extra{{ i }}">
+        <th scope="row" class="dataset-label" property="rdfs:label">{{ _(key) }}</th>
+        <td class="dataset-details" property="rdf:value">{{ display_value }}</td>
+      </tr>
+    {% endfor %}
+  {% endblock %}
+{% endblock %}
