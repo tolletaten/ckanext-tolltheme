@@ -1,0 +1,287 @@
+{
+  "scheming_version": 2,
+  "dataset_type": "dataset",
+  "about": "DCAT-AP-No v. 1.1, the Norwegian version of DCAT-AP",
+  "about_url": "https://doc.difi.no/dcat-ap-no/",
+  "dataset_fields": [
+    { "dcat_ap_no_comment": "dct:title",
+      "field_name": "title",
+      "label": "Title",
+      "preset": "title",
+      "form_placeholder": "eg. A descriptive title"
+    },
+    { "dcat_ap_no_comment": "CKAN-specific field",
+      "field_name": "name",
+      "label": "URL",
+      "preset": "dataset_slug",
+      "form_placeholder": "eg. my-dataset"
+    },
+    { "dcat_ap_no_comment": "dct:description",
+      "field_name": "notes",
+      "label": "Description",
+      "form_snippet": "markdown.html",
+      "form_placeholder": "eg. Some useful notes about the data"
+    },
+    { "dcat_ap_no_comment": "dct:identifier",
+      "field_name": "identifier",
+      "label": "Identifier",
+      "form_placeholder": "A global, unique identifier."
+    },
+    { "dcat_ap_no_comment": "dct:theme <==== might want to add more of these",
+      "field_name": "theme",
+      "label": { "en": "Theme/subject",
+        "no": "Tema"},
+      "preset": "multiple_checkbox",
+      "choices":[
+        {"value": "http://publications.europa.eu/resource/authority/data-theme/TRAN", "label": {"en": "Transport", "no": "Transport"}},
+        {"value": "http://publications.europa.eu/resource/authority/data-theme/ENVI", "label": {"en": "Environment", "no": "Miljø"}}
+      ]
+    },
+    { "dcat_ap_no_comment": "dct:publisher <=================== check this w/profiles.py",
+      "field_name": "owner_org",
+      "label": "Organization",
+      "preset": "dataset_organization"
+    },
+    {  "dcat_ap_no_comment": "CKAN specific field <=== can be used for dcat:contactPoint if no maintainer ",
+      "field_name": "author",
+      "label": "Author",
+      "form_placeholder": "Joe Bloggs",
+      "help_text": "Testing! Help inline = false.",
+      "help_inline" : "false"
+    },
+    {  "dcat_ap_no_comment": "CKAN specific field <=== can be used for dcat:contactPoint if no maintainer ",
+      "field_name": "author_email",
+      "label": "Author Email",
+      "form_placeholder": "joe@example.com",
+      "display_snippet": "email.html",
+      "display_email_name_field": "author",
+      "help_text": "Testing! Help inline = true.",
+      "help_inline" : "true"
+    },
+    { "dcat_ap_no_comment": "dcat:contactPoint",
+      "field_name": "maintainer",
+      "label": "Maintainer",
+      "form_placeholder": "Joe Bloggs",
+      "help_text": "Testing! No entry for help inline."
+    },
+    { "dcat_ap_no_comment": "dcat:contactPoint",
+      "field_name": "maintainer_email",
+      "label": "Maintainer Email",
+      "form_placeholder": "joe@example.com",
+      "display_snippet": "email.html",
+      "display_email_name_field": "maintainer"
+    },
+    { "dcat_ap_no_comment": "dcat:keyword",
+      "field_name": "tag_string",
+      "label": "Tags",
+      "preset": "tag_string_autocomplete",
+      "form_placeholder": "eg. economy, mental health, government"
+    },
+    { "dcat_ap_no_comment": "dct:accessRights",
+      "field_name": "access_rights",
+      "label": { "en": "Access Rights",
+        "no": "Tilgangsrettigheter"},
+      "preset": "multiple_checkbox",
+      "choices":[
+        {"value": "http://publications.europa.eu/resource/authority/access-right/PUBLIC", "label": "public"},
+        {"value": "http://publications.europa.eu/resource/authority/access-right/RESTRICTED", "label": "restricted"},
+        {"value": "http://publications.europa.eu/resource/authority/access-right/NON_PUBLIC", "label": "non-public"}
+      ],
+      "help_text": "PUBLIC: Publicly accessible by everyone. Usage note: Permissible obstacles include registration and request for API keys, as long as anyone can request such registration and/or API keys. RESTRICTED: Only available under certain conditions. Usage note: This category may include resources that require payment, resources shared under non-disclosure agreements, resources for which the publisher or owner has not yet decided if they can be publicly released. NON-PUBLIC: Not publicly accessible for privacy, security or other reasons. Usage note: This category may include resources that contain sensitive or personal information."
+    },
+    { "dcat_ap_no_comment": "dcatno:accessRightsComment",
+      "field_name": "access_rights_comment",
+      "label": { "en": "Access Rights Comment",
+        "no": "Skjermingshjemmel"},
+      "form_placeholder": { "en": "Link to relevant paragraph",
+        "no": "Lenke til relevant paragraf i Lovdata"},
+      "display_snippet": "link.html",
+      "help_text": "If 'access rights' is 'restricted' or 'non-public', use this field to refer to the legal basis for restricting access to the data."
+    },
+    { "dcat_ap_no_comment": "dct:subject",
+      "field_name": "subject",
+      "label": { "en": "Subject",
+        "no": "Begrep"},
+      "form_placeholder": { "en": "Link",
+        "no": "Lenke"},
+      "display_snippet": "link.html",
+      "help_text": {    "en": "Link to concepts which are important to understand the data.",
+        "no": "Referanse til sentrale begrep som er viktige for å forstå og tolke datasettet."}
+    },
+    { "dcat_ap_no_comment": "dct:conformsTo",
+      "field_name": "conforms_to",
+      "label": { "en": "Conforms to",
+        "no": "I samsvar med"},
+      "form_placeholder": { "en": "Link",
+        "no": "Lenke"},
+      "display_snippet": "link.html",
+      "help_text": {    "en": "Link to implementation rule or other specification.",
+        "no": "Referanse til en implementasjons-regel eller annen spesifikasjon som ligger til grunn for opprettelsen av datasettet."}
+    },
+    { "dcat_ap_no_comment": "foaf:page",
+      "field_name": "documentation",
+      "label": { "en": "Documentation",
+        "no": "Dokumentasjon"},
+      "form_placeholder": { "en": "Link",
+        "no": "Lenke"},
+      "display_snippet": "link.html"
+    },
+    { "dcat_ap_no_comment": "dct:accrualPeriodicity",
+      "field_name": "frequency",
+      "label": { "en": "Frequency",
+        "no": "Frekvens"},
+      "form_placeholder": { "en": "Selection list to be inserted <=======================",
+        "no": "Her skal vi ha en valgliste <======================="}
+    },
+    { "dcat_ap_no_comment": "dcat:landingPage",
+      "field_name": "url",
+      "label": "Source",
+      "form_placeholder": "http://example.com/dataset.json",
+      "display_snippet": "link.html",
+      "help_text": {    "en": "Link to main page for the dataset, with data and/or additional information.",
+        "no": "Nettside som gir tilgang til datasettet,  distribusjoner og/eller tilleggsinformasjon."}
+    },
+    { "dcat_ap_no_comment": "dct:language",
+      "field_name": "language",
+      "label": { "en": "Language",
+        "no": "Språk"},
+      "preset": "multiple_checkbox",
+      "choices":[
+        {"value": "http://publications.europa.eu/resource/authority/language/NOR", "label": {"en": "Norwegian", "no": "norsk"}},
+        {"value": "http://publications.europa.eu/resource/authority/language/ENG", "label": {"en": "English", "no": "engelsk"}}
+      ],
+      "help_text": {    "en": "The language of the dataset.",
+        "no": "Språket som datasettet er på."}
+    },
+    { "dcat_ap_no_comment": "adms:identifier",
+      "field_name": "alternate_identifier",
+      "label": { "en": "Other Identifier",
+        "no": "Annen identifikator"},
+      "form_placeholder": { "en": "something",
+        "no": "noe"},
+      "help_text": {    "en": "Secondary identifier, like MAST/ADS, DataCite, DOI, EZID, or  W3ID.",
+        "no": "SReferanse til en sekundær identifikator, som MAST/ADS, DataCite, DOI, EZID eller W3ID."}
+    },
+    { "dcat_ap_no_comment": "dct:provenance",
+      "field_name": "provenance",
+      "label": { "en": "Provenance",
+        "no": "Opphav"},
+      "help_text": {    "en": "Reference to description of where/how the dataset is produced, and its quality.",
+        "no": "Referanse til objekt som beskriver hvor datasettet kommer fra, hvordan det er produsert og hvilken kvalitet det har"}
+    },
+    { "dcat_ap_no_comment": "dct:relation",
+      "field_name": "related_resource",
+      "label": { "en": "Related resource",
+        "no": "Relatert ressurs"}
+    },
+    { "dcat_ap_no_comment": "dct:issued",
+      "field_name": "issued",
+      "label": { "en": "Issued Date",
+        "no": "Utgivelsesdato"},
+      "preset": "date",
+      "help_text": {    "en": "The date the dataset was issued",
+        "no": "Datoen datasettet ble utgitt"}
+    },
+    { "dcat_ap_no_comment": "dct:spatial <==== FIXME ADD translation and spatial and spatial_text",
+      "field_name": "spatial_uri",
+      "label": { "en": "Location",
+        "no": "Dekningsområde"},
+      "preset": "multiple_checkbox",
+      "choices":[
+        {"value": "http://sws.geonames.org/3144096/", "label": {"en": "Norway", "no": "Norge"}},
+        {"value": "http://sws.geonames.org/3137400/", "label": {"en": "Sør-Trøndelag", "no": "Sør-Trøndelag"}}
+      ],
+      "help_text": {    "en": "Geographical area covered by the dataset",
+        "no": "Geografisk område dekket av datasettet"}
+    },
+    { "dcat_ap_no_comment": "dct:temporal - start date",
+      "field_name": "temporal_start",
+      "label": { "en": "Period of time - start date",
+        "no": "Tidsperiode - startdato"},
+      "preset": "date",
+      "help_text": {    "en": "Start date, if the dataset is valid for a limited time period",
+        "no": "Startdato hvis datasettet er gyldig for en begrenset tidsperiode"}
+    },
+    { "dcat_ap_no_comment": "dct:temporal - end date",
+      "field_name": "temporal_end",
+      "label": { "en": "Period of time - end date",
+        "no": "Tidsperiode - sluttdato"},
+      "preset": "date",
+      "help_text": {    "en": "End date, if the dataset is valid for a limited time period",
+        "no": "Sluttdato hvis datasettet er gyldig for en begrenset tidsperiode"}
+    },
+    { "dcat_ap_no_comment": "dct:modified",
+      "field_name": "modified",
+      "label": "Modified",
+      "help_text": {    "en": "When the dataset was last updated",
+        "no": "Dato for siste oppdatering av datasettet"},
+      "preset": "date"
+    },
+    { "dcat_ap_no_comment": "owl:versionInfo",
+      "field_name": "version",
+      "label": "Version",
+      "validators": "ignore_missing unicode package_version_validator",
+      "form_placeholder": "1.0"
+    },
+    { "dcat_ap_no_comment": "adms:versionNotes",
+      "field_name": "version_notes",
+      "label": { "en": "Version notes",
+        "no": "Notater om versjonen"},
+      "form_placeholder": { "en": "The difference between this version and the previous one of the dataset",
+        "no": "Forskjellen mellom denne og forrige versjon av datasettet"}
+    },
+    { "dcat_ap_no_comment": "dct:creator",
+      "field_name": "creator",
+      "label": { "en": "Creator",
+        "no": "Skaper"},
+      "help_text": {    "en": "Creator of the data set.",
+        "no": "Skaperen av av datasettet."}
+    },
+    { "dcat_ap_no_comment": "dct:isPartOf",
+      "field_name": "is_part_of",
+      "label": { "en": "Is part of",
+        "no": "Er del av"},
+      "help_text": {    "en": "Dataset which this dataset is a part of",
+        "no": "Datasett som dette datasettet er en del av"},
+      "display_snippet": "link.html"
+    },
+    { "dcat_ap_no_comment": "dct:hasPart",
+      "field_name": "has_part",
+      "label": { "en": "Has part",
+        "no": "Har del"},
+      "help_text": {    "en": "Dataset which has part of this dataset",
+        "no": "Datasett som er en del av dette datasettet"},
+      "display_snippet": "link.html"
+    },
+    { "dcat_ap_no_comment": "dct:license. NB! This is a CKAN field on dataset level. In DCAT-AP-NO, this is only given for catalogue and for distribution  <=== check this with profiles.py",
+      "field_name": "license_id",
+      "label": "License",
+      "form_snippet": "license.html",
+      "display_snippet": "license.html",
+      "help_text": "License definitions and additional information can be found at http://opendefinition.org/"
+    }
+  ],
+  "resource_fields": [
+    {
+      "field_name": "url",
+      "label": "URL",
+      "preset": "resource_url_upload"
+    },
+    {
+      "field_name": "name",
+      "label": "Name",
+      "form_placeholder": "eg. January 2011 Gold Prices"
+    },
+    {
+      "field_name": "description",
+      "label": "Description",
+      "form_snippet": "markdown.html",
+      "form_placeholder": "Some useful notes about the data"
+    },
+    {
+      "field_name": "format",
+      "label": "Format",
+      "preset": "resource_format_autocomplete"
+    }
+  ]
+}
