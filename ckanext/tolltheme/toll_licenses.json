@@ -1,0 +1,30 @@
+[
+  {
+    "domain_content": true,
+    "domain_data": true,
+    "domain_software": false,
+    "family": "",
+    "id": "TVINN-BRUK",
+    "is_generic": false,
+    "maintainer": "Tolletaten",
+    "od_conformance": "not reviewed",
+    "osd_conformance": "not reviewed",
+    "status": "active",
+    "title": "TVINN-BRUK",
+    "url": ""
+  },
+  {
+    "domain_content": true,
+    "domain_data": true,
+    "domain_software": false,
+    "family": "",
+    "id": "NLOD",
+    "is_generic": false,
+    "maintainer": "Kommunal- og moderniseringsdepartementet",
+    "od_conformance": "not reviewed",
+    "osd_conformance": "not reviewed",
+    "status": "active",
+    "title": "Norsk lisens for offentlige data (NLOD)",
+    "url": "https://data.norge.no/nlod/no/"
+  }
+]
