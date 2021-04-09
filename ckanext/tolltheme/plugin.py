@@ -17,7 +17,7 @@ def url_with_version_token(url):
 
 class TollthemePlugin(plugins.SingletonPlugin, DefaultTranslation):
     plugins.implements(plugins.IConfigurer)
-    plugins.implements(plugins.IFacets)
+    plugins.implements(plugins.IFacets, inherit=True)
     plugins.implements(plugins.ITranslation)
     plugins.implements(plugins.ITemplateHelpers)
 
