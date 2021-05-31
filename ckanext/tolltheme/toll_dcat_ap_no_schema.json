@@ -33,8 +33,8 @@
         "no": "Tema"},
       "preset": "multiple_checkbox",
       "choices":[
-        {"value": "http://publications.europa.eu/resource/authority/data-theme/TRAN", "label": {"en": "Transport", "no": "Transport"}},
-        {"value": "http://publications.europa.eu/resource/authority/data-theme/ENVI", "label": {"en": "Environment", "no": "Miljø"}}
+        {"value": "https://psi.norge.no/los/tema/naring", "label": {"en": "Business", "no": "Næring"}},
+        {"value": "https://psi.norge.no/los/tema/avgift", "label": {"en": "Fee", "no": "Avgift"}}
       ]
     },
     { "dcat_ap_no_comment": "dct:publisher <=================== check this w/profiles.py",
