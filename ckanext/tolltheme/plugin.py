@@ -1,9 +1,8 @@
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 import uuid
-
-from ckan.lib.plugins import DefaultTranslation
 from ckan.common import config
+from ckan.lib.plugins import DefaultTranslation
 from collections import OrderedDict
 
 # Token that can be added as parameter to static resources, to force the browser to refresh them after a ckan restart.
@@ -15,11 +14,19 @@ def url_with_version_token(url):
     return url + ('?' if '?' not in url else '&') + 'v=' + token
 
 
+def set_dataset_publisher_uri(value):
+    if value:
+        return value
+    else:
+        return config.get('ckan.publisher.uri')
+
+
 class TollthemePlugin(plugins.SingletonPlugin, DefaultTranslation):
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.IFacets, inherit=True)
     plugins.implements(plugins.ITranslation)
     plugins.implements(plugins.ITemplateHelpers)
+    plugins.implements(plugins.IValidators)
 
     # IConfigurer
 
@@ -47,3 +54,7 @@ class TollthemePlugin(plugins.SingletonPlugin, DefaultTranslation):
     # ITemplateHelpers
     def get_helpers(self):
         return {'tolltheme_url_with_version_token': url_with_version_token}
+
+    # IValidators
+    def get_validators(self):
+        return {'tolltheme_set_dataset_publisher_uri': set_dataset_publisher_uri}

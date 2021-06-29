@@ -37,10 +37,11 @@
         {"value": "https://psi.norge.no/los/tema/avgift", "label": {"en": "Fee", "no": "Avgift"}}
       ]
     },
-    { "dcat_ap_no_comment": "dct:publisher <=================== check this w/profiles.py",
-      "field_name": "owner_org",
-      "label": "Organization",
-      "preset": "dataset_organization"
+    { "dcat_ap_no_comment": "dct:publisher",
+      "field_name": "publisher_uri",
+      "label": "Publisher",
+      "validators": "tolltheme_set_dataset_publisher_uri",
+      "display_snippet": null
     },
     {  "dcat_ap_no_comment": "CKAN specific field <=== can be used for dcat:contactPoint if no maintainer ",
       "field_name": "author",
