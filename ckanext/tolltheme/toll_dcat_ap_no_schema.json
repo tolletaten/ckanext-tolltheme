@@ -260,6 +260,11 @@
       "form_snippet": "license.html",
       "display_snippet": "license.html",
       "help_text": "License definitions and additional information can be found at http://opendefinition.org/"
+    },
+    {
+      "field_name": "owner_org",
+      "label": "Organization",
+      "preset": "dataset_organization"
     }
   ],
   "resource_fields": [
