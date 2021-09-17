@@ -1,0 +1,11 @@
+{% ckan_extends %}
+
+{%- block scripts %}
+  {{ super() }}
+  <script src="/cookie-handling.js"></script>
+{% endblock %}
+
+{%- block content %}
+  {{ super() }}
+  {% snippet 'snippets/cookies_message.html' %}
+{% endblock %}
