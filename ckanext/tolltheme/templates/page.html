@@ -6,7 +6,7 @@
 {% endblock %}
 
 {%- block content %}
-  {{ super() }}
+{% snippet 'snippets/google-tag-manager.html' %}
+{{ super() }}
   {% snippet 'snippets/cookies_message.html' %}
-  {% snippet 'snippets/google-tag-manager.html' %}
 {% endblock %}
